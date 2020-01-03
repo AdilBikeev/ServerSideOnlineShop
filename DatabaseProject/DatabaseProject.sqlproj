@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="CreateTable" />
+    <Folder Include="Entity Framework" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="CreateTable\User.sql" />
