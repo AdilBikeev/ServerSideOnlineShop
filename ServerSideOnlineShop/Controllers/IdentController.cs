@@ -27,7 +27,7 @@ namespace ServerSideOnlineShop.Controllers
                 )
                 return JsonHellper.GetOkReesult();
             else
-                return JsonHellper.GetBadReesult();
+                return JsonHellper.GetBadReesult("Неверный логин/пароль");
         }
     }
 }

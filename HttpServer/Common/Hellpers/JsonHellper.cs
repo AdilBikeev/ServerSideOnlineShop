@@ -13,6 +13,15 @@ namespace ServerSideOnlineShop.Common.Hellpers
                                                                    { "status", "error" } ,
                                                                     { "err_desc", "Ошибка при выполнении запроса на стороне сервера" }
                                                                 };
+        /// <summary>
+        /// Возвращает сообщение об ошибке с указанным пояснением
+        /// </summary>
+        /// <param name="err_desc">Пояснение к ошибке</param>
+        /// <returns></returns>
+        public static JObject GetBadReesult(string err_desc) => new JObject() {
+                                                                   { "status", "error" } ,
+                                                                    { "err_desc", err_desc }
+                                                                };
 
         /// <summary>
         /// Возвращает строковое значение свойства JSON объекта
