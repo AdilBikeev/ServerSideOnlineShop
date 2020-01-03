@@ -10,19 +10,21 @@ using ServerSideOnlineShop.Models.IdentModels;
 
 namespace ServerSideOnlineShop.Controllers
 {
-    public class IdentController: Controller
+    public class IdentController : Controller
     {
         private IdentModels ident;
-        public IdentController ()
+        public IdentController()
         {
             ident = new IdentModels();
         }
 
         [Route("/ident/autorisation")]
-        [HttpGet]
-        public JObject Autorisation (string login, string password)
+        [HttpPost]
+        public JObject Autorisation([FromBody] JObject data)
         {
-            if (ident.Auth(login, password))
+            if (data != null && 
+                    ident.Auth(JsonHellper.GetValue(data, "login"), JsonHellper.GetValue(data, "password"))
+                )
                 return JsonHellper.GetOkReesult();
             else
                 return JsonHellper.GetBadReesult();
