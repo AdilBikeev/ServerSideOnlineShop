@@ -18,3 +18,5 @@
 /ServerSideOnlineShop/bin
 /ServerSideOnlineShop/obj
 /packages
+/HttpServer/AppData/ShopOnline.mdf
+/HttpServer/AppData/ShopOnline_log.ldf
