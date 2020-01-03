@@ -5,22 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Newtonsoft.Json.Linq;
+using ServerSideOnlineShop.Common.Hellpers;
+using ServerSideOnlineShop.Models.IdentModels;
 
 namespace ServerSideOnlineShop.Controllers
 {
     public class IdentController: Controller
     {
-        [Route("/ident/autorisation")]
-        public JsonResult Autorisation (string login, string password)
+        private IdentModels ident;
+        public IdentController ()
         {
-            JObject obj = new JObject();
-            if(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
-            {
+            ident = new IdentModels();
+        }
 
-            }
-
-            JsonResult response = new JsonResult(obj);
-            return response;
+        [Route("/ident/autorisation")]
+        [HttpGet]
+        public JObject Autorisation (string login, string password)
+        {
+            if (ident.Auth(login, password))
+                return JsonHellper.GetOkReesult();
+            else
+                return JsonHellper.GetBadReesult();
         }
     }
 }
