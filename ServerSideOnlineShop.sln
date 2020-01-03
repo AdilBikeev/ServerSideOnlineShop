@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSideOnlineShop", "Ser
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseProject", "DatabaseProject\DatabaseProject.sqlproj", "{BBD8D904-6D87-4DE8-A8DF-A0AB66C4B13F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpServer", "HttpServer\HttpServer.csproj", "{8853C859-674A-4B79-A1CD-BDB519C082FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{BBD8D904-6D87-4DE8-A8DF-A0AB66C4B13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBD8D904-6D87-4DE8-A8DF-A0AB66C4B13F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBD8D904-6D87-4DE8-A8DF-A0AB66C4B13F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8853C859-674A-4B79-A1CD-BDB519C082FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8853C859-674A-4B79-A1CD-BDB519C082FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8853C859-674A-4B79-A1CD-BDB519C082FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8853C859-674A-4B79-A1CD-BDB519C082FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
