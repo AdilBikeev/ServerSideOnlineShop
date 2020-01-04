@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HttpServer.Common.Database;
+using HttpServer.Common.Loggers;
 
-namespace ServerSideOnlineShop.Models
+namespace HttpServer.Common
 {
     /// <summary>
     /// Базовая модель контроллеров
@@ -33,5 +34,10 @@ namespace ServerSideOnlineShop.Models
         /// Название модели
         /// </summary>
         protected string Name { get; set; }
+
+        /// <summary>
+        /// Объект для логирования процессов 
+        /// </summary>
+        public Logger logger;
     }
 }

@@ -12,22 +12,27 @@ namespace ServerSideOnlineShop.Controllers
 {
     public class IdentController : Controller
     {
-        private IdentModels ident;
+        private IdentModel ident;
         public IdentController()
         {
-            ident = new IdentModels();
+            ident = new IdentModel();
         }
 
         [Route("/ident/autorisation")]
         [HttpPost]
         public JObject Autorisation([FromBody] JObject data)
         {
+            JObject res;
             if (data != null && 
                     ident.Auth(JsonHellper.GetValue(data, "login"), JsonHellper.GetValue(data, "password"))
                 )
-                return JsonHellper.GetOkReesult();
+                res = JsonHellper.GetOkReesult();
             else
-                return JsonHellper.GetBadReesult("Неверный логин/пароль");
+                res = JsonHellper.GetBadReesult("Неверный логин/пароль");
+
+            this.ident.logger.Log($"Autorisation Response: res={res.ToString()}");
+
+            return res;
         }
     }
 }

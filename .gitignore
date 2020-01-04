@@ -15,11 +15,14 @@
 /DatabaseProject/obj
 /HttpServer/bin
 /HttpServer/obj
+/ServerSideOnlineShop/bin
 /ServerSideOnlineShop/obj
 /packages
 /HttpServer/AppData/ShopOnline.mdf
 /HttpServer/AppData/ShopOnline_log.ldf
 /.vs/ServerSideOnlineShop/DesignTimeBuild/.dtbcache
+
+
 /ServerSideOnlineShop/Properties/PublishProfiles/FolderProfile.pubxml
 /ServerSideOnlineShop/Properties/PublishProfiles/FolderProfile.pubxml.user
 /ServerSideOnlineShop/bin/Debug/netcoreapp3.1/HttpServer.dll
@@ -98,3 +101,4 @@
 /ServerSideOnlineShop/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /ServerSideOnlineShop/bin/Release/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
 /ServerSideOnlineShop/bin/Release/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/ServerSideOnlineShop/appsettings.json
