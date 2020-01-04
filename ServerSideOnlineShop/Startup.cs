@@ -8,11 +8,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
+using HttpServer.Common.Loggers;
+using Microsoft.Extensions.Configuration;
 
 namespace ServerSideOnlineShop
 {
     public class Startup
     {
+        public static IConfiguration Configuration { get; set; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -31,7 +35,15 @@ namespace ServerSideOnlineShop
             }
  
             app.UseStaticFiles();
-            app.UseMvc();           // нет определенных маршрутов
+            app.UseMvc();           // нет определенных маршрутов
+
+            var configBuilder = new ConfigurationBuilder()
+                    .SetBasePath(env?.ContentRootPath)
+                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            configBuilder.AddEnvironmentVariables();
+            Configuration = configBuilder.Build();
+            Logger.Path = Configuration["Logging:Path"];
         }
     }
 }

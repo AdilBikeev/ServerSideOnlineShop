@@ -21,3 +21,5 @@
 /HttpServer/AppData/ShopOnline.mdf
 /HttpServer/AppData/ShopOnline_log.ldf
 /.vs/ServerSideOnlineShop/DesignTimeBuild/.dtbcache
+/ServerSideOnlineShop/Properties/PublishProfiles/FolderProfile.pubxml
+/ServerSideOnlineShop/Properties/PublishProfiles/FolderProfile.pubxml.user
