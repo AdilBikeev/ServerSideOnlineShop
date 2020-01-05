@@ -14,8 +14,8 @@ namespace ServerSideOnlineShop.Models.IdentModels
         public IdentModel()
         {
             this.Name = "Ident";
-            this.shopDb.User.Load();
             this.logger = new Logger(this.Name);
+            this.shopDb.User.Load();
         }
 
         /// <summary>

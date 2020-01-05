@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using HttpServer.Common.Loggers;
+using HttpServer.Common.Database;
 using Microsoft.Extensions.Configuration;
 
 namespace ServerSideOnlineShop
@@ -37,13 +38,22 @@ namespace ServerSideOnlineShop
             app.UseStaticFiles();
             app.UseMvc();           // нет определенных маршрутов
 
-            var configBuilder = new ConfigurationBuilder()
-                    .SetBasePath(env?.ContentRootPath)
-                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            try
+            {
+                var configBuilder = new ConfigurationBuilder()
+                        .SetBasePath(env?.ContentRootPath)
+                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-            configBuilder.AddEnvironmentVariables();
-            Configuration = configBuilder.Build();
-            Logger.Path = Configuration["Logging:Path"];
+                configBuilder.AddEnvironmentVariables();
+
+                Configuration = configBuilder.Build();
+                Logger.Path = Configuration["Logging:Path"];
+                ShopOnlineContext.pathSettings = Configuration["CommonConfigurePaths:DbConfig"];
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
         }
     }
 }
