@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[ProductStatus]
 (
-	[id] TINYINT NOT NULL PRIMARY KEY, 
+	[id] TINYINT NOT NULL PRIMARY KEY IDENTITY (1,1), 
     [name] NVARCHAR(50) NULL
 )

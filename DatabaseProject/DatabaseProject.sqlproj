@@ -61,5 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="CreateTable\User.sql" />
+    <Build Include="CreateTable\Product.sql" />
+    <Build Include="CreateTable\ProductStatus.sql" />
+    <Build Include="CreateTable\ProductType.sql" />
+    <Build Include="CreateTable\ProductFeature.sql" />
+    <Build Include="CreateTable\ProductFeatureSelect.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DatabaseProject.refactorlog" />
   </ItemGroup>
 </Project>
