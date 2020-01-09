@@ -3,16 +3,15 @@ using System.Collections.Generic;
 
 namespace HttpServer.Common.Database
 {
-    public partial class User
+    public partial class ProductStatus
     {
-        public User()
+        public ProductStatus()
         {
             Product = new HashSet<Product>();
         }
 
-        public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public byte Id { get; set; }
+        public string Name { get; set; }
 
         public virtual ICollection<Product> Product { get; set; }
     }

@@ -1,1 +1,1 @@
-﻿Scaffold-DbContext "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Адиль\source\repos\ServerSideOnlineShop\HttpServer\AppData\ShopOnline.mdf;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\Database
+﻿Scaffold-DbContext "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Адиль\source\repos\ServerSideOnlineShop\HttpServer\AppData\ShopOnline.mdf;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Common\Database -Force
